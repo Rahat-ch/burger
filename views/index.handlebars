@@ -1,28 +1,35 @@
 <div class="container">
 
-    <div class="burger_area">
+    <div class="jumbotron">
+      <div class="container">
+
+        <div class="col-md-6">
         <h1>Eat da Burger!</h1>
         <p>Add a burger and devour it!</p>
         <br>
-        <h2>Make a Burger</h2>
-        <panel>
+        <h2>Cook a Burger</h2>
+
             <form class="create-form">
                 <div class="form-group">
                     <label for="newburger">New Burger:</label>
                     <input type="text" id="newburger" name="burger">
-                  
+
                     <button type="submit" id="addburger">Add Burger</button>
                 </div>
             </form>
-        </panel>
+
+        </div>
+        <div class="col-md-6">
+        </div>
+          </div>
     </div>
 
-    <div>
+    <div class="container">
         <!-- Undevoured Burgers -->
-        <div>
-            <div>
+        <div class="col-md-6">
+
                 <div><strong>New Burgers</strong></div>
-                <div>
+
                     <ul>
                         {{#each burgers}}
                             {{#unless devoured}}
@@ -32,14 +39,14 @@
                             {{/unless}}
                         {{/each}}
                     </ul>
-                </div>
-            </div>
+
+
         </div>
         <!-- Devoured Burgers -->
-        <div>
-            <div>
+        <div class="col-md-6">
+
                 <div><strong>Devoured Burgers</strong></div>
-                <div>
+
                     <ul>
                         {{#each burgers}}
                             {{#if devoured}}
@@ -49,8 +56,7 @@
                             {{/if}}
                         {{/each}}
                     </ul>
-                </div>
-            </div>
+
         </div>
     </div>
 
